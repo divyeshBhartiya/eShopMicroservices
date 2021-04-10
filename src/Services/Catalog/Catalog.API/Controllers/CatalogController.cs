@@ -53,6 +53,7 @@ namespace Catalog.API.Controllers
             return Ok(products);
         }
 
+        [Route("[action]", Name = "PostProduct")]
         [HttpPost]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Product>> CreateProduct([FromBody] Product product)
@@ -61,6 +62,7 @@ namespace Catalog.API.Controllers
             return result ? Ok(product) : BadRequest();
         }
 
+        [Route("[action]", Name = "PostProductBatch")]
         [HttpPost]
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> CreateProducts([FromBody] IEnumerable<Product> products)
