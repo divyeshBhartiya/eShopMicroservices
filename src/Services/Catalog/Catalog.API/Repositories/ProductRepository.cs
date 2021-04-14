@@ -36,17 +36,10 @@ namespace Catalog.API.Repositories
             return await _context.Products.Find(filter).ToListAsync();
         }
 
-        public async Task<bool> CreateProduct(Product product)
+        public async Task<Product> CreateProduct(Product product)
         {
-            try
-            {
-                await _context.Products.InsertOneAsync(product);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            await _context.Products.InsertOneAsync(product);
+            return product;
         }
         public async Task<bool> CreateProducts(IEnumerable<Product> products)
         {

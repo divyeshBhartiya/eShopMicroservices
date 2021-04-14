@@ -58,8 +58,8 @@ namespace Catalog.API.Controllers
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Product>> CreateProduct([FromBody] Product product)
         {
-            bool result = await _repository.CreateProduct(product);
-            return result ? Ok(product) : BadRequest();
+            var createdProduct = await _repository.CreateProduct(product);
+            return createdProduct != null ? Ok(createdProduct) : BadRequest();
         }
 
         [Route("[action]", Name = "PostProductBatch")]
@@ -72,11 +72,11 @@ namespace Catalog.API.Controllers
         }
 
         [HttpPut]
-        [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<bool>> UpdateProduct([FromBody] Product product)
+        [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<Product>> UpdateProduct([FromBody] Product product)
         {
             bool result = await _repository.UpdateProduct(product);
-            return result ? Ok(result) : NotFound();
+            return result ? Ok(product) : NotFound();
         }
 
         [HttpDelete("{id:length(24)}", Name = "DeleteProduct")]
