@@ -5,15 +5,15 @@ using System.Linq;
 
 namespace Ordering.Application.Exceptions
 {
-    public class ValidationException : ApplicationException
+    public class CommandValidationException : ApplicationException
     {
-        public ValidationException()
+        public CommandValidationException()
             : base("One or more validation failures have occurred.")
         {
             Errors = new Dictionary<string, string[]>();
         }
 
-        public ValidationException(IEnumerable<ValidationFailure> failures)
+        public CommandValidationException(IEnumerable<ValidationFailure> failures)
             : this()
         {
             Errors = failures
