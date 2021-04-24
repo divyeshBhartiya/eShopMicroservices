@@ -29,9 +29,9 @@ namespace Ordering.Application.Features.Orders.Commands
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        public async Task<int> Handle(CheckoutOrderCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CheckoutOrderCommand command, CancellationToken cancellationToken)
         {
-            var orderEntity = _mapper.Map<Order>(request);
+            var orderEntity = _mapper.Map<Order>(command);
             var newOrder = await _orderRepository.AddAsync(orderEntity);
 
             _logger.LogInformation($"Order {newOrder.Id} is successfully created.");
