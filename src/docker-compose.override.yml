@@ -78,6 +78,16 @@ services:
     ports:
       - "8003:80"
 
+  ordering.api:
+    container_name: ordering.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:OrderingConnectionString=Server=orderdb;Database=OrderDb;User Id=sa;Password=Dvs123456789;"
+    depends_on:
+      - orderdb
+    ports:
+      - "8004:80"
+
   #portainer:
   #  container_name: portainer
   #  restart: always
@@ -97,3 +107,4 @@ services:
   #    - discountdb
   #  ports:
   #    - "8002:80"
+

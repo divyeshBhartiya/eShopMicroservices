@@ -27,6 +27,11 @@ services:
     build:
       context: .
       dockerfile: Services/Discount/Discount.gRPC/Dockerfile
+  ordering.api:
+    image: ${DOCKER_REGISTRY-}orderingapi
+    build:
+      context: .
+      dockerfile: Services/Ordering/Ordering.API/Dockerfile
 
   #discount.api:
   #  image: ${DOCKER_REGISTRY-}discountapi
@@ -37,9 +42,11 @@ services:
   #portainer:
   #  image: portainer/portainer-ce
 
+
 volumes:
   mongo_data:
   postgres_data:
   pgadmin_data:
   #portainer_data:
+
 
