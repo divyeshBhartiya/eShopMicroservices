@@ -27,6 +27,15 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 
+  orderdb:
+    container_name: orderdb
+    environment:
+        SA_PASSWORD: "Dvs123456789"
+        ACCEPT_EULA: "Y"
+    restart: always
+    ports:
+        - "1433:1433"
+
   pgadmin:
     container_name: pgadmin
     environment:
@@ -59,7 +68,6 @@ services:
     ports:
       - "8001:80"
 
-  
   discount.grpc:
     container_name: discount.grpc
     environment:
