@@ -36,16 +36,12 @@ services:
     ports:
         - "1433:1433"
 
-  pgadmin:
-    container_name: pgadmin
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=admin@eshop.com
-      - PGADMIN_DEFAULT_PASSWORD=admin1234
+  rabbitmq:
+    container_name: rabbitmq
     restart: always
     ports:
-        - "5050:80"
-    volumes:
-      - pgadmin_data:/root/.pgadmin
+        - "5672:5672"
+        - "15672:15672"
 
   catalog.api:
     container_name: catalog.api
@@ -87,6 +83,17 @@ services:
       - orderdb
     ports:
       - "8004:80"
+  
+  #pgadmin:
+  #  container_name: pgadmin
+  #  environment:
+  #    - PGADMIN_DEFAULT_EMAIL=admin@eshop.com
+  #    - PGADMIN_DEFAULT_PASSWORD=admin1234
+  #  restart: always
+  #  ports:
+  #      - "5050:80"
+  #  volumes:
+  #    - pgadmin_data:/root/.pgadmin
 
   #portainer:
   #  container_name: portainer
