@@ -39,6 +39,12 @@ services:
     build:
       context: .
       dockerfile: Services/Ordering/Ordering.API/Dockerfile
+  
+  ocelotapigateway:
+    image: ${DOCKER_REGISTRY-}ocelotapigateway
+    build:
+      context: .
+      dockerfile: APIGateways/OcelotAPIGateway/Dockerfile
 
   #pgadmin:
   #  image: dpage/pgadmin4
@@ -51,12 +57,13 @@ services:
   
   #portainer:
   #  image: portainer/portainer-ce
-
+    
 
 volumes:
   mongo_data:
   postgres_data:
   #pgadmin_data:
   #portainer_data:
+
 
 
