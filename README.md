@@ -51,3 +51,10 @@ ASPNET Core Web Application with Bootstrap 4 and Razor template.
 Docker Compose Containerization of All Microservices.
 
 pgAdmin PostgreSQL Tools feature rich Open Source administration and development platform for PostgreSQL.
+
+## Courtesy: 
+https://github.com/mehmetozkaya
+
+## References:
+https://medium.com/aspnetrun/cqrs-and-event-sourcing-in-event-driven-architecture-of-ordering-microservices-fb67dc44da7a
+https://www.udemy.com/
