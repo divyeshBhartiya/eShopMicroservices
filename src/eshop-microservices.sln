@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Messages", "Buildi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGateways", "APIGateways", "{8535C4A1-E84A-4F13-8672-8EB008F6BDF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotAPIGateway", "APIGateways\OcelotAPIGateway\OcelotAPIGateway.csproj", "{510BF873-233E-4764-90BC-0B73822B823E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotAPIGateway", "APIGateways\OcelotAPIGateway\OcelotAPIGateway.csproj", "{510BF873-233E-4764-90BC-0B73822B823E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Aggregator", "APIGateways\Shopping.Aggregator\Shopping.Aggregator.csproj", "{1EA23AE3-1DAD-4320-83E8-5E42855226E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,10 @@ Global
 		{510BF873-233E-4764-90BC-0B73822B823E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{510BF873-233E-4764-90BC-0B73822B823E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{510BF873-233E-4764-90BC-0B73822B823E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA23AE3-1DAD-4320-83E8-5E42855226E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA23AE3-1DAD-4320-83E8-5E42855226E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA23AE3-1DAD-4320-83E8-5E42855226E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA23AE3-1DAD-4320-83E8-5E42855226E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +114,7 @@ Global
 		{4A9FC65D-9618-4378-80D9-AB64D5954AE8} = {A049F4BA-9A34-4FE7-AF8F-6CF7E1DBD299}
 		{CFBDE43F-DED1-467E-9E18-4729B9F5BEA5} = {A59F24B4-4D8C-4CAD-9544-353363AD4FD6}
 		{510BF873-233E-4764-90BC-0B73822B823E} = {8535C4A1-E84A-4F13-8672-8EB008F6BDF3}
+		{1EA23AE3-1DAD-4320-83E8-5E42855226E2} = {8535C4A1-E84A-4F13-8672-8EB008F6BDF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24B3784B-FE4C-454F-BF9E-49699EA8E8E7}
