@@ -1,37 +1,60 @@
-## Welcome to GitHub Pages
+# eShopMicroservices
+Building Microservices on .Net platforms which used Asp.Net Web API, Docker, RabbitMQ, MassTransit, Grpc, Ocelot API Gateway, MongoDB, Redis, PostgreSQL, SqlServer, Dapper, Entity Framework Core, CQRS and Clean Architecture implementation.
 
-You can use the [editor on GitHub](https://github.com/divyeshBhartiya/eShopMicroservices/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Developing e-commerce modules over Product, Basket and Ordering microservices with NoSQL (MongoDB, Redis) and Relational databases (PostgreSQL, Sql Server) with communicating over RabbitMQ Event Driven Communication and using Ocelot API Gateway.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Contains:
+ASPNET Core Web API Development of Microservices.
 
-### Markdown
+REST API Principles, CRUD Operations.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Mongo DB and Redis NoSQL Database Connection on Docker.
 
-```markdown
-Syntax highlighted code block
+Entity Framework Core with SQL Server Database Connection on Docker.
 
-# Header 1
-## Header 2
-### Header 3
+N-Layer implementation with Repository Pattern.
 
-- Bulleted
-- List
+Swagger Open API implementation.
 
-1. Numbered
-2. List
+Consume Discount Grpc Service for inter-service sync communication to calculate product final price.
 
-**Bold** and _Italic_ and `Code` text
+Publish BasketCheckout Queue with using MassTransit and RabbitMQ.
 
-[Link](url) and ![Image](src)
-```
+Build a Highly Performant inter-service gRPC Communication with Basket Microservice.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Using Dapper for micro-orm implementation to simplify data access and ensure high performance.
 
-### Jekyll Themes
+PostgreSQL database connection and containerization.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/divyeshBhartiya/eShopMicroservices/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Async Microservices Communication with RabbitMQ Message-Broker Service.
 
-### Support or Contact
+Using RabbitMQ Publish/Subscribe Topic Exchange Model.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Using MassTransit for abstraction over RabbitMQ Message-Broker system.
+
+Implementing DDD, CQRS, and Clean Architecture with using Best Practices.
+
+Developing CQRS with using MediatR, FluentValidation and AutoMapper packages.
+
+Consuming RabbitMQ BasketCheckout event queue with using MassTransit-RabbitMQ Configuration.
+
+Using Entity Framework Core ORM and auto migrate to SqlServer when application startup.
+
+Ocelot API Gateway Development of Microservices.
+
+Call Ocelot APIs with HttpClientFactory.
+
+The Gateway aggregation pattern in Shopping Aggregator.
+
+ASPNET Core Web Application with Bootstrap 4 and Razor template.
+
+Docker Compose Containerization of All Microservices.
+
+pgAdmin PostgreSQL Tools feature rich Open Source administration and development platform for PostgreSQL.
+
+## Courtesy: 
+https://github.com/mehmetozkaya
+
+## References:
+https://medium.com/aspnetrun/cqrs-and-event-sourcing-in-event-driven-architecture-of-ordering-microservices-fb67dc44da7a
+https://www.udemy.com/
