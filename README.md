@@ -1,7 +1,12 @@
 # eShopMicroservices
 Building Microservices on .Net platforms which used Asp.Net Web API, Docker, RabbitMQ, MassTransit, Grpc, Ocelot API Gateway, MongoDB, Redis, PostgreSQL, SqlServer, Dapper, Entity Framework Core, CQRS and Clean Architecture implementation.
 
-Developing e-commerce modules over Product, Basket and Ordering microservices with NoSQL (MongoDB, Redis) and Relational databases (PostgreSQL, Sql Server) with communicating over RabbitMQ Event Driven Communication and using Ocelot API Gateway.
+Developing e-commerce modules over Product, Basket and Ordering microservices with NoSQL (MongoDB, Redis) and Relational databases (PostgreSQL, Sql Server) with communicating over RabbitMQ Event Driven Communication and Ocelot API Gateway which could be extended for implementing reverse proxy or similar.
+
+The idea is, when an user would create/update Basket, (which gets saved in Redis), a Discount gRPC service would be called and update the total price of the basket (Discount rates are saved in DiscountDb, PostgreSQL). When user checkout the basket, a Basket Checkout Event would be fired and gets queued in the RabbitMQ. This event is handled at Order Microservice. This would get save at the OrderDb (SQL Server). Once the checkout event is fired to the RabbitMQ, the Basket Microservice deletes the Basket from the BasketDb(Redis). Once the Order is created in the OrderDb, you can query the order using GetOrders endpoint.
+
+There is a Catalog Microservice as well, which handles the product records and uses MongoDb for persistence.
+The complete setup has docker support with DockerFiles for individual Microservices and respective DBs. This setup is orchaestrated by docker-compose.
 
 ## Contains:
 ASPNET Core Web API Development of Microservices.
