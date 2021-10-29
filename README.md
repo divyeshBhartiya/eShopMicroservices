@@ -1,5 +1,7 @@
 # eShopMicroservices
 
+## Big Picture:
+
 <img width="759" alt="eShopMicroservices" src="https://user-images.githubusercontent.com/16538471/139402051-c5552c9e-086c-456d-9517-b45d33e13163.png">
 
 
