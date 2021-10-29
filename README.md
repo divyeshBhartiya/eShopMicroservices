@@ -1,4 +1,10 @@
 # eShopMicroservices
+
+## Big Picture
+
+![eShopMicroservices](https://user-images.githubusercontent.com/16538471/139399254-21e931cf-04c1-4908-9641-eb1f46a63bee.png)
+
+
 Building Microservices on .Net platforms which used Asp.Net Web API, Docker, RabbitMQ, MassTransit, Grpc, Ocelot API Gateway, MongoDB, Redis, PostgreSQL, SqlServer, Dapper, Entity Framework Core, CQRS and Clean Architecture implementation.
 
 Developing e-commerce modules over Product, Basket and Ordering microservices with NoSQL (MongoDB, Redis) and Relational databases (PostgreSQL, Sql Server) with communicating over RabbitMQ Event Driven Communication and Ocelot API Gateway which could be extended for implementing reverse proxy or similar.
