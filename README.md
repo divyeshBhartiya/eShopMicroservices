@@ -1,6 +1,6 @@
 # eShopMicroservices
 
-![eShopMicroservices](https://user-images.githubusercontent.com/16538471/139399254-21e931cf-04c1-4908-9641-eb1f46a63bee.png)
+<img width="759" alt="eShopMicroservices" src="https://user-images.githubusercontent.com/16538471/139402051-c5552c9e-086c-456d-9517-b45d33e13163.png">
 
 
 Building Microservices on .Net platforms which used Asp.Net Web API, Docker, RabbitMQ, MassTransit, Grpc, Ocelot API Gateway, MongoDB, Redis, PostgreSQL, SqlServer, Dapper, Entity Framework Core, CQRS and Clean Architecture implementation.
