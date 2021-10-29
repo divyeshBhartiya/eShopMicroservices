@@ -1,7 +1,5 @@
 # eShopMicroservices
 
-## Big Picture
-
 ![eShopMicroservices](https://user-images.githubusercontent.com/16538471/139399254-21e931cf-04c1-4908-9641-eb1f46a63bee.png)
 
 
